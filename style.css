@@ -141,7 +141,7 @@
 
         .tournament-links {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(5, 1fr);
             gap: 1px;
             margin-bottom: 30px;
             justify-items: center;
@@ -189,6 +189,7 @@
             text-align: center;
             color: inherit;
         }
+
         /* Section Tournois Individuels */
         /* Styles généraux pour toutes les sections de tournois */
 .tournament-section {
@@ -258,18 +259,23 @@
 }
 
 /* Coupe du Monde Féminine 2027 - Forcer le bleu */
-#coupemondefeminine2027 .dialog-header {
-    background: #0A84FF !important;
+#coupemondeU-172025delaFIFAQatar2025 .dialog-header {
+    background: #600028 !important;
 }
 
 /* Coupe du Monde U20 2025 - Forcer le bleu */
 #coupemondeU202025 .dialog-header {
-    background: #1E1560 !important;
+    background: #4F0063 !important;
 }
 
 /* Coupe du Monde Futsal 2025 - Forcer le bleu */
-#coupemondefutsal2025 .dialog-header {
-    background: #75148F !important;
+#intercontinantalecoupe .dialog-header {
+    background: #0A84FF !important;
+}
+
+/*coupe arabe de la fifa 2025 */
+#coupearabe2025 .dialog-header {
+    background: #4B0618 !important;
 }
 
 .dialog-icon {
@@ -349,17 +355,13 @@
 }
 
 /* Coupe du Monde Féminine 2027 - ROSE/VIOLET */
-#coupemondefeminine2027 .dialog-btn {
-    background: #0A84FF; /* Bleu */
-}
-
-#coupemondefeminine2027 .dialog-btn:hover {
-    background: #034282; /* Bleu foncé */
+#coupemondeU-172025delaFIFAQatar2025 .dialog-btn {
+    background: #600028; /* Bleu */
 }
 
 /* Coupe du Monde U20 2025 - VERT */
 #coupemondeU202025 .dialog-btn {
-    background: #1E1560; /* mauve */
+    background: #75148F; /* violet */
 }
 
 #coupemondeU202025 .dialog-btn:hover {
@@ -367,12 +369,13 @@
 }
 
 /* Coupe du Monde Futsal 2025 - Violet */
-#coupemondefutsal2025 .dialog-btn {
-    background: #75148F; /* Violet */
+#intercontinantalecoupe .dialog-btn {
+    background: #0A84FF; /* Violet */
 }
 
-#coupemondefutsal2025 .dialog-btn:hover {
-    background: #340541; /* Violet foncé */
+/*coupe arabe de la fifa 2025 */
+#coupearabe2025 .dialog-btn {
+    background: #4B0618 ; /* Couleur spécifique */
 }
 
 /* Styles background spécifiques pour chaque section */
@@ -383,60 +386,99 @@
 }
 
 /* Coupe du Monde Féminine 2027 - Arrière-plan couleur */
-#coupemondefeminine2027 {
-    background: linear-gradient(135deg, #002D72 0%, #002D72 100%);
+#coupemondeU-172025delaFIFAQatar2025 {
+    background: linear-gradient(135deg, #870040 0%, #870040 100%);
 }
 
 /* Coupe du Monde U20 2025 - Arrière-plan image */
 #coupemondeU202025 {
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1200x600/198754/ffffff?text=Coupe+du+Monde+U20+2025');
+    background-image: linear-gradient(135deg, #75148F 0%, #75148F 100%);
 }
 
 /* Coupe du Monde Futsal 2025 - Arrière-plan image */
-#coupemondefutsal2025 {
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1200x600/fd7e14/ffffff?text=Coupe+du+Monde+Futsal+2025');
+#intercontinentalecoupe {
+    background-image: linear-gradient(135deg, #060F38 0%, #060F38 100%);
+}
+
+/*coupe du monde arabe de la fifa 2025 - Arrière-plan couleur */
+#coupearabe2025 {
+    background-image: linear-gradient(135deg, #10492C 0%, #10492C 100%);
 }
 
         /* Section Autres Tournois */
-        .other-tournaments {
+        .section_derniers_tournois1 {
+            border-radius: 0px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 30px;
+            padding-bottom: 60px;
+        }
+        .last-tournament {
             margin: 30px 90px;
             padding: 60px 0px 0px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: -44px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 30px;
         }
 
-        .other-tournament {
+        .section-titrers{
+            margin: -30px 90px;
+            padding: 60px 0px 0px;
+            margin-top: -50px;
+            font-size: 2.5rem;
+            font-weight: normal;
+            color: #03122B;
+            text-align: left;
+            margin-bottom: -60px;
+            padding-left: 0;
+        }
+
+        .tournaments-carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .tournament-items {
+            min-width: calc(33.333% - 20px);
+            margin-right: 30px;
             position: relative;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
-        .other-tournament img {
+        .tournament-items img {
             width: 100%;
-            height: 212px;
+            height: 200px;
             object-fit: cover;
-            margin-bottom: 1px;
             display: block;
+            margin-bottom: 25px;
         }
 
-        .other-tournament p {
-            padding: 15px;
-            background: white;
+        .tournament-items p {
+            position: relative;
+            bottom: 10px;
             text-align: center;
+            color: #03122B;
+            padding: 5px 10px;
+            font-size: 16px;
         }
 
-        .section-titre{
-            margin: -30px 90px;
-            padding: 60px 0px 0px;
-            margin-top: 1px;
-            font-size: 2.5rem;
-            font-weight: normal;
-            color: #03122B;
-            text-align: left;
-            margin-bottom: 1rem;
-            padding-left: 0;
+        .carousel-control {
+            margin: 30px 70px;
+            position: absolute;
+            right: 20px;
+            display: flex;
+            bottom: 20px;
+        }
+
+        .carousel-control i {
+            background: #E4E8F0;
+            color: #59637A;
+            padding: 8px;
+            border-radius: 50%;
+            margin-left: 5px;
+            cursor: pointer;
+            z-index: 100;
         }
 
         /* Section Derniers Tournois */
